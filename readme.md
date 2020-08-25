@@ -2,13 +2,11 @@
 
 This plugin adds a Reader Bar into your template as you scroll the page.
 
-
 ## Installation
 
-Available on [npm](https://www.npmjs.com/package/eleventy-plugin-reader-bar)
+Available on [npm](https://www.npmjs.com/package/eleventy-plugin-reader-bar).
 
 `npm install eleventy-plugin-reader-bar`
-
 
 ## Configuration
 
@@ -22,15 +20,14 @@ module.exports = function(eleventyConfig) {
 }
 ```
 
-
 ## Usage
 
 1.  In your base template:
-    - Create a `div` HTML Element with the class `reader-bar-start`.
-    - This div must wrapp all the elements of the page, including header and footer. If not, the bar will be 100% full before you scroll the entire page;
+  - Create a `div` HTML Element with the class `reader-bar-start`.
+      - This div must wrapp all the elements of the page, including the header and the footer. If not, the bar will be 100% full before you scroll the entire page;
 2. In your post template:
-    - Add the shortcode `{% readerBar %}` after the content;
-
+  - Add the shortcode `{% readerBar %}` after the content;
+    - Check templates specific shortcodes in [Examples](#examples) section; 
 
 ## Customization
 
@@ -41,11 +38,9 @@ You can customize the height, and the colors of the bar:
 
 ### Examples
 
-`{% readerBar %}` displays the default reader bar *(default works in liquid and nunkucks templates)*
+`{% readerBar %}` displays the default reader bar *(default works in liquid and nunjucks templates)*
 
-![default](https://user-images.githubusercontent.com/11902225/91081087-f3ae9880-e61c-11ea-94dc-6539dc33e38d.png)
-
-`{% readerBar "8px" "red" %}` displays the reader bar with heigth of 8px and a red background color
+`{% readerBar "8px" "red" %}` displays the reader bar with height of 8px and a red background color
 
 `{% readerBar "8px" "#ff0000" "#0000ff" %}` displays the reader bar with height of 8px, red background color and blue fill color
 
@@ -55,13 +50,15 @@ You can customize the height, and the colors of the bar:
 **Obs for handlebars templates:** all parameters must be informed.
 `{{{ readerBar "8px" "#ff0000" "#0000ff" }}}`
 
+### See a demo
 
-## Run Sample Locally
+[11ty Plugin Reader Bar Demo](https://11typluginreaderbar.vercel.app/)
 
-Clone this repo with: `git clone https://www.github.com/thigoap/eleventy-plugin-reader-bar.git`
+### or Run a sample locally
 
-Run the sample locally with: `npm test` 
+Clone this repository: `git clone https://www.github.com/thigoap/eleventy-plugin-reader-bar.git`
 
+Run the sample locally: `npm test` 
 
 ## License
 

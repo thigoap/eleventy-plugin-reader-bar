@@ -18,6 +18,10 @@ module.exports = (njk, height = "4px", bgColor = "#010101", fillColor = "orange"
     let winH = window.innerHeight;
     const content = document.querySelector('.reader-bar-start');
 
+    content.style.display = "flex";
+    content.style.flexDirection = "column";
+    content.style.flexGrow = "1";
+
     let contentH = content.offsetHeight;
     let contentS = contentH - winH;
     let readerBar = document.getElementById('readerBar');

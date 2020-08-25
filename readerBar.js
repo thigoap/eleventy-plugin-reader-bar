@@ -7,7 +7,11 @@ module.exports = (height = "4px", bgColor = "black", fillColor = "orange") => {
   <script>
     let winH = window.innerHeight;
     const content = document.querySelector('.reader-bar-start');
-      
+
+    content.style.display = "flex";
+    content.style.flexDirection = "column";
+    content.style.flexGrow = "1";
+
     let contentH = content.offsetHeight;
     let contentS = contentH - winH;
     let readerBar = document.getElementById('readerBar');
