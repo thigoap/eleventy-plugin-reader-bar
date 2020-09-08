@@ -9,6 +9,18 @@ module.exports = (njk, height = "4px", bgColor = "#010101", fillColor = "orange"
     height = njk;
   }
 
+  if (height == "0px") {
+    return `
+    <style>
+      .reader-bar-start {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+    </style>
+    `
+  }
+
   return `
   <div style="height:${height};width:100%;background-color:${bgColor};position:fixed;top:2px;left:0;z-index:100;transition:0.2s;">
     <div id="readerBar" style="height:${height};width:0;background-color:${fillColor};position:fixed;top:2px;left:0;z-index:200;transition:0.2s;"></div>
@@ -17,10 +29,6 @@ module.exports = (njk, height = "4px", bgColor = "#010101", fillColor = "orange"
   <script>
     let winH = window.innerHeight;
     const content = document.querySelector('.reader-bar-start');
-
-    content.style.display = "flex";
-    content.style.flexDirection = "column";
-    content.style.flexGrow = "1";
 
     let contentH = content.offsetHeight;
     let contentS = contentH - winH;

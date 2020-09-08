@@ -6,11 +6,20 @@
   <title>Example for Eleventy Reader Bar Plugin</title>
 </head>
 <body>
-  <div class="reader-bar-start">
+  <div class="reader-bar-start"> <!-- div to style the reader bar -->
+
     <div style="width:540px; text-align:center;margin:0 auto;line-height:1.6rem;">
       {{ content | safe }}
     </div>
-  </div>
-  {% readerBar %}
+  
+  </div> <!-- end oh the div, wrapping the entire page -->
+
+  {% readerBar %} <!-- short code -->
+  <!--
+    In this case, the base template is the page that uses the reader bar.
+    If you want to see an example of the reader bar being used only in the content pages,
+    please follow the instructions in the readme.md or check the reader bar demo page example:
+    https://thigoap.github.io/11ty-plugin-reader-bar-demo
+  -->
 </body>
 </html>
