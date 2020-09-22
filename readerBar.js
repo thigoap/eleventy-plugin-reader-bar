@@ -13,7 +13,7 @@ module.exports = (height = "4px", bgColor = "black", fillColor = "orange") => {
   }
 
   return `
-  <div style="height:${height};width:100%;background-color:${bgColor};position:fixed;top:2px;left:0;z-index:100;transition:0.2s;">
+  <div id="readerBarContainer" style="height:${height};width:100%;background-color:${bgColor};position:fixed;top:2px;left:0;z-index:100;transition:0.2s;">
     <div id="readerBar" style="height:${height};width:0;background-color:${fillColor};position:fixed;top:2px;left:0;z-index:200;transition:0.2s;"></div>
   </div>
   
