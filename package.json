@@ -1,6 +1,6 @@
 {
   "name": "eleventy-plugin-reader-bar",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "A plugin to add a Reader Bar into your template as you scroll the page.",
   "main": ".eleventy.js",
   "scripts": {
