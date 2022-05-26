@@ -1,5 +1,8 @@
-module.exports = (njk, height = "4px", bgColor = "#010101", fillColor = "orange") => {
+module.exports = (njk, height = "4px", bgColor = "#010101", fillColor = "orange", paddingt = "2px") => {
   if (njk) {
+    if (fillColor !== "orange") {
+      paddingt = fillColor;
+    }   
     if (bgColor !== "#010101") {
       fillColor = bgColor;
     }
@@ -26,6 +29,7 @@ module.exports = (njk, height = "4px", bgColor = "#010101", fillColor = "orange"
   <div>
     <button
       id="upBtn"
+      aria-label="go to top"
       style="position:fixed; width:32px; height:32px; border-radius:50%; border:none; background-color:black; right:32px; bottom:32px; color:white; focus:outline-none; cursor:pointer; transition-duration:500ms; opacity:0; pointer-events:none;"
     ><i class="arrow up"></i></button>
   </div>
@@ -63,8 +67,8 @@ module.exports = (njk, height = "4px", bgColor = "#010101", fillColor = "orange"
   </script>
 
   <!-- reader bar -->
-  <div id="readerBarContainer" style="height:${height};width:100%;background-color:${bgColor};position:fixed;top:2px;left:0;z-index:100;transition:0.2s;">
-    <div id="readerBar" style="height:${height};width:0;background-color:${fillColor};position:fixed;top:2px;left:0;z-index:200;transition:0.2s;"></div>
+  <div id="readerBarContainer" style="height:${height};width:100%;background-color:${bgColor};position:fixed;top:${paddingt};left:0;z-index:100;transition:0.2s;">
+    <div id="readerBar" style="height:${height};width:0;background-color:${fillColor};position:fixed;top:${paddingt};left:0;z-index:200;transition:0.2s;"></div>
   </div>
 
   <script>

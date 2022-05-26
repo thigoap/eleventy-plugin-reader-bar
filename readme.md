@@ -32,10 +32,11 @@ module.exports = function(eleventyConfig) {
 
 ## Customization
 
-You can customize the height and the colors of the bar:
+You can customize the height, colors of the bar, and its padding top:
 - height: the thickness of the bar. Value in px (default: 4px)
 - background color: color of the full width bar. Value can be literal or hexa (default: black)
 - fill color: color that fills the bar as you scroll the page. Value can be literal or hexa (default: orange)
+- padding top: space between the top of the screen and the bar (default: 2px)
 
 ### Examples
 
@@ -47,11 +48,14 @@ You can customize the height and the colors of the bar:
 
 `{% readerBar "8px" "#ff0000" "#0000ff" %}` displays the reader bar with height of 8px, red background color and blue fill color
 
+`{% readerBar "8px" "#ff0000" "#0000ff" "0px" %}` displays the reader bar as the example above and no padding top
+
+
 **Obs for nunjucks templates:** the arguments need to be comma separated.
 `{% readerBar "8px", "#ff0000", "#0000ff" %}`
 
 **Obs for handlebars templates:** all parameters must be informed.
-`{{{ readerBar "8px" "#ff0000" "#0000ff" }}}`
+`{{{ readerBar "8px" "#ff0000" "#0000ff" "3px" }}}`
 
 ## See a demo
 
